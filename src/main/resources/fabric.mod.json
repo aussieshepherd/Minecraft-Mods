@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "wolfmod",
+	"version": "${version}",
+	"name": "Wolf Mod",
+	"description": "This mod should edit wolf behavior to make them better at fighting players and strong mobs, as well as slightly change their stats",
+	"authors": [
+		"aussieshepherd"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/wolfmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.aussieshepherd.wolfmod.WolfMod"
+		],
+		"client": [
+			"net.aussieshepherd.wolfmod.WolfModClient"
+		],
+		"fabric-datagen": [
+			"net.aussieshepherd.wolfmod.WolfModDataGenerator"
+		]
+	},
+	"mixins": [
+		"wolfmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
